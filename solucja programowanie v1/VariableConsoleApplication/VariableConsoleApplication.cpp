@@ -155,7 +155,7 @@ void task12()
 	std::cin >> pln;
 	std::cout << "Cena za 1 euro wynosi 4,26 pln " << std::endl;
 
-	std::cout << " Podana kwota w euro wynosi: " << pln / 4.26 << std::endl;
+	std::cout << " Podana kwota w euro wynosi.: " << pln / 4.26 << std::endl;
 }
 int main()
 {

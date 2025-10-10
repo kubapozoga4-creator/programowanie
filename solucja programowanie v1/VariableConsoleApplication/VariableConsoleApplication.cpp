@@ -1,271 +1,203 @@
-#include <iostream>
+ï»¿ï»¿#include <iostream>
 
-/*
-*.
-*. Program obliczaj¹cy objêtoœæ sto¿ka.
-*. Program obliczaj¹cy pole ko³a.
-*. Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2
-*. Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h
-*. Program obliczaj¹cy objêtoœæ kuli o promieniu r
-*. Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h
-*. Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
-*. Stwórz program, który pobiera od u¿ytkownika d³ugoœæ w metrach i przelicza j¹ na centymetry i milimetry, wyœwietlaj¹c wynik.
-*. Napisz program, który konwertuje wprowadzon¹ kwotê w jednej walucie na inn¹, korzystaj¹c z okreœlonego kursu wymiany.
-*/
 
-//Napisz program który wczyta liczbê od u¿ytkownika i j¹ wyœwietli na konsoli
 
+
+//Napisz program ktÃ³ry wczyta liczbÄ™ od uÅ¼ytkownika i jÄ… wyÅ›wietli na konsoli
 void task1()
 {
-    //wczytanie liczby
-        //deklaracja zmiennych          1
-        //pobranie liczby
-            //informacja co chcemy      2
-            //oczekiwanie na liczbê     3
-    //wyœwietlenie na konsoli           4
+	//wczytanie liczby
+		//deklaracja zmiennych          1
+		//pobranie liczby
+			//informacja co chcemy      2
+			//oczekiwanie na liczbÄ™     3
+	//wyÅ›wietlenie na konsoli           4
 
-    //1
-    int numberFromUser; //number_from_user
-    //2
-    std::cout << "Podaj liczbê ca³kowit¹:\n";
-    //3
-    std::cin >> numberFromUser;
-    //4
-    std::cout << "Poda³eœ " << numberFromUser << "\n";
+	//1
+	int numberFromUser; //number_from_user
+	//2
+	std::cout << "Podaj liczbÄ™ caÅ‚kowitÄ…:\n";
+	//3
+	std::cin >> numberFromUser;
+	//4
+	std::cout << "PodaÅ‚eÅ› " << numberFromUser << "\n";
 }
-
-//Program obliczaj¹cy œredni¹ arytmetyczn¹ dwóch liczb.
+//Program obliczajÄ…cy Å›redniÄ… arytmetycznÄ… dwÃ³ch liczb.
 void task2()
 {
-    int firstNumber, secondNumber;
+	int firstNumber, secondNumber;
 
-    std::cout << "Podaj pierwsz¹ liczbê:\n";
-    std::cin >> firstNumber;
+	std::cout << "Podaj pierwszÄ… liczbÄ™:\n";
+	std::cin >> firstNumber;
 
-    std::cout << "Podaj drug¹ liczbê:\n";
-    std::cin >> secondNumber;
+	std::cout << "Podaj drugÄ… liczbÄ™:\n";
+	std::cin >> secondNumber;
 
-    int avg;
+	int avg;
 
-    avg = (firstNumber + secondNumber) / 2;
+	avg = (firstNumber + secondNumber) / 2;
 
-    std::cout << "Wynik œredniej: " << avg << "\n";
+	std::cout << "Wynik Å›redniej: " << avg << "\n";
 }
-
-//Program obliczaj¹cy objêtnoœæ sto¿ka
+//Program obliczajÄ…ce pole pole prostokÄ…ta
 void task3()
 {
-#include <iostream>
-#include <cmath>
-    using namespace std;
+	int sideA, sideB;
+	std::cout << "Aby obliczyÄ‡ pole prostokÄ…ta podaj bok A:\n";
+	std::cin >> sideA;
 
-    int main() 
-    {
-        double r, h, V;
-        cout << "Podaj promien podstawy sto¿ka (r): ";
-        cin >> r;
-        cout << "Podaj wysokosc sto¿ka (h): ";
-        cin >> h;
-        V = (M_PI * r * r * h) / 3;
-        cout << "Objetosc sto¿ka: " << V << endl;
-        return 0;
-    }
+	std::cout << "Aby obliczyÄ‡ pole prostokÄ…ta podaj bok B:\n";
+	std::cin >> sideB;
 
+	int area;
+
+	area = (sideA * sideB);
+
+	std::cout << "Pole prostokÄ…ta wynosi" << area << "\n";
 }
-
-//program obliczaj¹cy pole ko³a
+//Program obliczajÄ…cy pole stoÅ¼ka.
 void task4()
 {
-#include <iostream>
-#include <cmath>
-    using namespace std;
-
-    int main() 
-    {
-        double r, P;
-        cout << "Podaj promien kola: ";
-        cin >> r;
-        P = M_PI * r * r;
-        cout << "Pole kola: " << P << endl;
-        return 0;
-    }
-
+	float r, h;
+	std::cout << "======[Objetosc stozka]======\n";
+	std::cout << " Podaj promieÅ„= ";
+	std::cin >> r;
+	std::cout << "Podaj wysokosc stozka= ";
+	std::cin >> h;
+	std::cout << "Objetosc stozka= " << (1.0f / 3.0f) * 3.14 * r * r * h << std::endl;
 }
-
-//Program obliczaj¹cy wartoœæ wyra¿enia a^2 + b^2
+//Program obliczajÄ…cy pole koÅ‚a
 void task5()
-{ 
-#include <iostream>
-#include <cmath>
-    using namespace std;
-
-    int main() 
-    {
-        double a, b, wynik;
-        cout << "Podaj a: ";
-        cin >> a;
-        cout << "Podaj b: ";
-        cin >> b;
-        wynik = pow(a, 2) + pow(b, 2);
-        cout << "Wartosc wyrazenia a^2 + b^2: " << wynik << endl;
-        return 0;
-    }
-
+{
+	float r;
+	std::cout << "======[Pole koÅ‚a]======\n";
+	std::cout << " Podaj promien= ";
+	std::cin >> r;
+	std::cout << "Pole kola= " << 3.14 * r * r << std::endl;
 }
-
-//Program obliczaj¹cy pole trójk¹ta o podstawie b i wysokoœci h
+//Program obliczajÄ…cy wartoÅ›Ä‡ wyraÅ¼enia a^2 + b^2
 void task6()
 {
-#include <iostream>
-    using namespace std;
-
-    int main() {
-        double b, h, pole;
-        cout << "Podaj podstawe trojkata (b): ";
-        cin >> b;
-        cout << "Podaj wysokosc trojkata (h): ";
-        cin >> h;
-        pole = 0.5 * b * h;
-        cout << "Pole trojkata: " << pole << endl;
-        return 0;
-    }
-
+	float a, b;
+	std::cout << "Podaj liczbe a ktora bÄ™dzie pomnozona przez kwadrat: ";
+	std::cin >> a;
+	std::cout << "Podaj liczbe b ktora bedzie pomnozona przez kwadrat: ";
+	std::cin >> b;
+	std::cout << "Wynik dodawania a i b gdzie oby dwie liczby sa pomnozone przez kwadrat:" << a * a + b * b << std::endl;
 }
-
-//Program obliczaj¹cy objêtoœæ kuli o promieniu r
+//Program obliczajÄ…cy pole trÃ³jkÄ…ta o podstawie b i wysokoÅ›ci h
 void task7()
 {
-#include <iostream>
-#include <cmath>
-    using namespace std;
-
-    int main() {
-        double r, V;
-        cout << "Podaj promien kuli: ";
-        cin >> r;
-        V = (4.0 / 3.0) * M_PI * pow(r, 3);
-        cout << "Objetosc kuli: " << V << endl;
-        return 0;
-    }
-
-}   
-
-//Program obliczaj¹cy pole trapezu o podstawach a i b oraz wysokoœci h
+	float b, h;
+	std::cout << "Podaj podstawÄ™: ";
+	std::cin >> b;
+	std::cout << "Podaj wysokoÅ›Ä‡: ";
+	std::cin >> h;
+	std::cout << "Pole trÃ³jkÄ…ta wynosi: " << (b * h) / 2 << std::endl;
+}
+//Program obliczajÄ…cy objÄ™toÅ›Ä‡ kuli o promieniu r
 void task8()
 {
-#include <iostream>
-    using namespace std;
-
-    int main() {
-        double a, b, h, pole;
-        cout << "Podaj podstawe a: ";
-        cin >> a;
-        cout << "Podaj podstawe b: ";
-        cin >> b;
-        cout << "Podaj wysokosc h: ";
-        cin >> h;
-        pole = 0.5 * (a + b) * h;
-        cout << "Pole trapezu: " << pole << endl;
-        return 0;
-    }
-
+	float r;
+	std::cout << "Podaj promieÅ„: ";
+	std::cin >> r;
+	std::cout << "ObjÄ™toÅ›Ä‡ kuli o promieniu r wynosi:" << (4.0 / 3.0) * 3.14 * r * r * r << std::endl;
 }
-
-//Program obliczaj¹cy œredni¹ wa¿on¹ trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3
+//Program obliczajÄ…cy pole trapezu o podstawach a i b oraz wysokoÅ›ci h
 void task9()
 {
-#include <iostream>
-    using namespace std;
-
-    int main() {
-        double x1, x2, x3, w1, w2, w3, srednia;
-        cout << "Podaj trzy liczby: ";
-        cin >> x1 >> x2 >> x3;
-        cout << "Podaj trzy wagi: ";
-        cin >> w1 >> w2 >> w3;
-        srednia = (x1 * w1 + x2 * w2 + x3 * w3) / (w1 + w2 + w3);
-        cout << "Srednia wazona: " << srednia << endl;
-        return 0;
-    }
-
+	float a, b, h;
+	std::cout << "Podaj dÅ‚ugoÅ›Ä‡ podstawy a: ";
+	std::cin >> a;
+	std::cout << "Podaj dÅ‚ugoÅ›Ä‡ podstawy b: ";
+	std::cin >> b;
+	std::cout << "Podaj wysokoÅ›Ä‡: ";
+	std::cin >> h;
+	std::cout << "Pole trapezu wynosi: " << (a + b) * h / 2 << std::endl;
 }
-
-//Stwórz program, który pobiera od u¿ytkownika d³ugoœæ w metrach i przelicza j¹ na centymetry i milimetry, wyœwietlaj¹c wynik
+//Program obliczajÄ…cy Å›redniÄ… waÅ¼onÄ… trzech liczb z podanymi odpowiednimi wagami w1, w2 i w3.
 void task10()
 {
-#include <iostream>
-    using namespace std;
+	double x1, x2, x3;
+	double w1, w2, w3;
 
-    int main() {
-        double metry;
-        cout << "Podaj dlugosc w metrach: ";
-        cin >> metry;
-        cout << "Centymetry: " << metry * 100 << " cm" << endl;
-        cout << "Milimetry: " << metry * 1000 << " mm" << endl;
-        return 0;
-    }
+	std::cout << "Podaj pierwsza liczbe: ";
+	std::cin >> x1;
+	std::cout << "Podaj wage pierwszej liczby: ";
+	std::cin >> w1;
 
+	std::cout << "Podaj drugÄ… liczbe: ";
+	std::cin >> x2;
+	std::cout << "Podaj wage drugiej liczby: ";
+	std::cin >> w2;
+
+	std::cout << "Podaj trzeciÄ… liczbe: ";
+	std::cin >> x3;
+	std::cout << "Podaj wage trzeciej liczby: ";
+	std::cin >> w3;
+
+	std::cout << "Waga podanych licz wynosi: " << (x1 * w1 + x2 * w2 + x3 * w3) / (w1 + w2 + w3) << std::endl;
 }
-
-//Napisz program, który konwertuje wprowadzon¹ kwotê w jednej walucie na inn¹, korzystaj¹c z okreœlonego kursu wymiany
+//StwÃ³rz program, ktÃ³ry pobiera od uÅ¼ytkownika dÅ‚ugoÅ›Ä‡ w metrach i przelicza jÄ… na centymetry i milimetry, wyÅ›wietlajÄ…c wynik.
 void task11()
 {
-#include <iostream>
-    using namespace std;
-
-    int main() {
-        double kwotaPLN, kurs, kwotaEUR;
-        cout << "Podaj kwote w PLN: ";
-        cin >> kwotaPLN;
-        cout << "Podaj kurs wymiany PLN -> EUR: ";
-        cin >> kurs;
-        kwotaEUR = kwotaPLN / kurs;
-        cout << "Kwota w EUR: " << kwotaEUR << endl;
-        return 0;
-    }
-
+	float metry;
+	std::cout << "Podaj, iloÅ›Ä‡ metrÃ³w:";
+	std::cin >> metry;
+	std::cout << " Zmiana metrÃ³w na centymetry: " << metry * 100 << " Zmiana metrÃ³w na milimetry: " << metry * 1000 << std::endl;
 }
+// Napisz program, ktÃ³ry konwertuje wprowadzonÄ… kwotÄ™ w jednej walucie na innÄ…, korzystajÄ…c z okreÅ›lonego kursu wymiany.
+void task12()
+{
+	float pln;
 
+	std::cout << "Podaj ile pieniÄ™dzy masz w pln: ";
+	std::cin >> pln;
+	std::cout << "Cena za 1 euro wynosi 4,26 pln " << std::endl;
+
+	std::cout << " Podana kwota w euro wynosi: " << pln / 4.26 << std::endl;
+}
 int main()
 {
-    task3();
+	setlocale(LC_CTYPE, "polish");
+	task12();
 }
 
 
 /*
 
-Zmienna - pewien obszar w pamiêci operacyjnej, w której mo¿na
-w danej chwili przechowaæ tylko jedn¹ dan¹.
+Zmienna - pewien obszar w pamiÄ™ci operacyjnej, w ktÃ³rej moÅ¼na
+w danej chwili przechowaÄ‡ tylko jednÄ… danÄ….
 
 Instrukcja daklaracji zmiennej:
 typ_zmienej nazwaZmiennej;
 
-Typ zmiennej - wielkoœæ obszaru pamiêci, interpretacja ci¹gu bitów
+Typ zmiennej - wielkoÅ›Ä‡ obszaru pamiÄ™ci, interpretacja ciÄ…gu bitÃ³w
 
-int - 2 bajtowa lub 4 bajtowa liczba ca³kowita ze znakiem
-short - 2 bajtowa liczba ca³kowita ze znakiem <-32 768, 32 767>
-long - 4 bajtowa liczba ca³kowita ze znakiem <-2 147 483 648, 2 147 483 647>
+int - 2 bajtowa lub 4 bajtowa liczba caÅ‚kowita ze znakiem
+short - 2 bajtowa liczba caÅ‚kowita ze znakiem <-32 768, 32 767>
+long - 4 bajtowa liczba caÅ‚kowita ze znakiem <-2 147 483 648, 2 147 483 647>
 long long - 8 bajtowa liczba ze znakiem <-9 223 372 036 854 775 808, 9 223 372 036 854 775 807>
 
 unsigned - zmienna bez znaku <0, 2*max + 1>
 
-float - 4 bajtowa liczba rzeczywista, dok³adnoœæ 6-7 cyfr po przecinku
-double - 8 bajtowa liczba rzeczywista, dok³adnoœæ 15-16 cyfr po przecinku
-long double - 12 bajtowa liczba rzeczywista, dok³adnoœæ 19-20 cyfr po przecinku
+float - 4 bajtowa liczba rzeczywista, dokÅ‚adnoÅ›Ä‡ 6-7 cyfr po przecinku
+double - 8 bajtowa liczba rzeczywista, dokÅ‚adnoÅ›Ä‡ 15-16 cyfr po przecinku
+long double - 12 bajtowa liczba rzeczywista, dokÅ‚adnoÅ›Ä‡ 19-20 cyfr po przecinku
 
-Nazwa zmiennej - nazwa obszaru w pamiêci, identyfikator
-Warunki niezbêdne:
+Nazwa zmiennej - nazwa obszaru w pamiÄ™ci, identyfikator
+Warunki niezbÄ™dne:
 * dozwolone znaki:
-    - alfabet angielski aA-zZ
-    - cyfry arabskie 0-9
-    - podkreœlenie (pod³oga) _
-* pierwszym znakiem nie mo¿e byæ cyfra
-* unikalny w swoim zakresie widocznoœci
-* nie mo¿e to byæ s³owo kluczowe (zarezerwowane) danego jêzyka
+	- alfabet angielski aA-zZ
+	- cyfry arabskie 0-9
+	- podkreÅ›lenie (podÅ‚oga) _
+* pierwszym znakiem nie moÅ¼e byÄ‡ cyfra
+* unikalny w swoim zakresie widocznoÅ›ci
+* nie moÅ¼e to byÄ‡ sÅ‚owo kluczowe (zarezerwowane) danego jÄ™zyka
 
-Warunki programistów:
-* nazwa zmiennej powinna oddawaæ charakter przechowywanych danych
-* jeœli wiele s³ów to w miejscu spacji podkreœlenie lub zaczynaj¹c od drugiego
-  s³owa piszemy je z du¿ej litery
+Warunki programistÃ³w:
+* nazwa zmiennej powinna oddawaÄ‡ charakter przechowywanych danych
+* jeÅ›li wiele sÅ‚Ã³w to w miejscu spacji podkreÅ›lenie lub zaczynajÄ…c od drugiego
+  sÅ‚owa piszemy je z duÅ¼ej litery
 * piszemy po angielsku
 */
